@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+PROJECTS = "~/Projects"
+SILLYDOT = "sillydot"
+
+ARGV.each do|a|
+  p "Moving #{a}..."
+  `mv #{a} #{PROJECTS}/#{SILLYDOT}`
+  p "Linking #{a}..."
+  `ln -s #{PROJECTS}/#{SILLYDOT}/#{a} #{a}`
+end
+
