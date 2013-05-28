@@ -3,6 +3,12 @@ ZSH=$HOME/.oh-my-zsh
 
 EDITOR="vim"
 
+DB0ACTUAL="db0.igsone.com"
+WEB0ACTUAL="54.245.82.212"
+WEB1ACTUAL="ec2-54-245-156-144.us-west-2.compute.amazonaws.com"
+SOLR0ACTUAL="solr0.igsone.com"
+ZSHRC="~/.zshrc"
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -11,8 +17,15 @@ ZSH_THEME="robbyrussell"
 #DEFAULT_USER="ettinger"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias solr0="ssh -i ~/Downloads/andrewettingerkey.pem ubuntu@$SOLR1ACTUAL"
+alias web0="ssh -i ~/Downloads/andrewettingerkey.pem ubuntu@$WEB0ACTUAL"
+alias web1="ssh -i ~/Downloads/andrewettingerkey.pem ubuntu@$WEB1ACTUAL"
+
+alias db0="ssh -i ~/Downloads/andrewettingerkey.pem ubuntu@db0.igsone.com"
+
+alias start_nginx="sudo /usr/local/Cellar/nginx/1.2.4/sbin/nginx"
+alias gomobile="cd ~/Projects/igs/code/mobile"
+
 alias bets="bundle exec thin start"
 
 # Set to this to use case-sensitive completion
