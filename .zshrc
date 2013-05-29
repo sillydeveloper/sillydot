@@ -27,6 +27,13 @@ alias start_nginx="sudo /usr/local/Cellar/nginx/1.2.4/sbin/nginx"
 alias gomobile="cd ~/Projects/igs/code/mobile"
 
 alias bets="bundle exec thin start"
+alias h="history"
+alias l="ls -lah"
+alias p="pgrep -lf"
+alias i="ifconfig"
+alias tr="traceroute"
+alias npmig="sudo npm install -g"
+alias npms="sudo npm s"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -62,3 +69,4 @@ plugins=(git osx rails3 rails4 github autojump)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+export PATH=$PATH:/usr/local/share/npm/bin 
