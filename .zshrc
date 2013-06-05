@@ -35,6 +35,8 @@ alias tr="traceroute"
 alias npmig="sudo npm install -g"
 alias npms="sudo npm s"
 
+alias fix_bundle="bundle config --global path .bundle"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
