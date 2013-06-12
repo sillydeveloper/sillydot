@@ -24,9 +24,10 @@ alias web1="ssh -i ~/Downloads/andrewettingerkey.pem ubuntu@$WEB1ACTUAL"
 alias db0="ssh -i ~/Downloads/andrewettingerkey.pem ubuntu@db0.igsone.com"
 
 alias start_nginx="sudo /usr/local/Cellar/nginx/1.2.4/sbin/nginx"
-alias gomobile="cd ~/Projects/igs/code/mobile"
 
 alias bets="bundle exec thin start"
+alias beg="bundle exec guard"
+
 alias h="history"
 alias l="ls -lah"
 alias p="pgrep -lf"
@@ -71,4 +72,4 @@ plugins=(git osx rails3 rails4 github autojump)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/share/npm/bin 
+export PATH=$PATH:~/Projects/android-sdk/platform-tools:~/Projects/android-sdk/tools:/usr/local/share/npm/bin
