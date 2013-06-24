@@ -8,6 +8,7 @@ WEB0ACTUAL="54.245.82.212"
 WEB1ACTUAL="ec2-54-245-156-144.us-west-2.compute.amazonaws.com"
 SOLR0ACTUAL="solr0.igsone.com"
 ZSHRC="~/.zshrc"
+IGS_KEYFILE="~/Projects/igs/keys/andrewettingerkey.pem"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -17,9 +18,9 @@ ZSH_THEME="robbyrussell"
 #DEFAULT_USER="ettinger"
 
 # Example aliases
-alias solr0="ssh -i ~/Downloads/andrewettingerkey.pem ubuntu@$SOLR1ACTUAL"
-alias web0="ssh -i ~/Downloads/andrewettingerkey.pem ubuntu@$WEB0ACTUAL"
-alias web1="ssh -i ~/Downloads/andrewettingerkey.pem ubuntu@$WEB1ACTUAL"
+alias solr0="ssh -i $IGS_KEYFILE ubuntu@$SOLR1ACTUAL"
+alias web0="ssh -i $IGS_KEYFILE ubuntu@$WEB0ACTUAL"
+alias web1="ssh -i $IGS_KEYFILE ubuntu@$WEB1ACTUAL"
 
 alias db0="ssh -i ~/Downloads/andrewettingerkey.pem ubuntu@db0.igsone.com"
 
@@ -27,6 +28,7 @@ alias start_nginx="sudo /usr/local/Cellar/nginx/1.2.4/sbin/nginx"
 
 alias bets="bundle exec thin start"
 alias beg="bundle exec guard"
+alias be="bundle exec"
 
 alias h="history"
 alias l="ls -lah"
@@ -73,3 +75,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:~/Projects/android-sdk/platform-tools:~/Projects/android-sdk/tools:/usr/local/share/npm/bin
+export IGS_AWS_PEM=$IGS_KEYFILE
+export ANDROID_SDK=/Users/ettinger/Projects/android-sdk
+export ANDROID_HOME=/Users/ettinger/Projects/android-sdk
