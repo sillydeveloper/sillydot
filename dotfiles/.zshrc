@@ -55,6 +55,8 @@ alias npmig="sudo npm install -g"
 alias npms="sudo npm s"
 
 alias fix_bundle="bundle config --global path .bundle"
+alias aws="/Users/ettinger/.local/lib/aws/bin/aws"
+alias vsvpn="sudo /usr/local/sbin/openvpn --config ~/Projects/vendscreen/client.ovpn"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
