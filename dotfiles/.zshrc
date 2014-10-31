@@ -36,8 +36,8 @@ alias solr4="ssh -i $IGS_KEYFILE ubuntu@$SOLR4ACTUAL"
 alias api0="ssh -i $IGS_KEYFILE ubuntu@$API0ACTUAL"
 alias api2="ssh -i $IGS_KEYFILE ubuntu@$API2ACTUAL"
 
-alias db0="ssh -i ~/Downloads/andrewettingerkey.pem ubuntu@db0.igsone.com"
-alias db2="ssh -i ~/Downloads/andrewettingerkey.pem ubuntu@db2.igsone.com"
+alias db0="ssh -i ~/Projects/igs/keys/andrewettingerkey.pem ubuntu@db0.igsone.com"
+alias db2="ssh -i ~/Projects/igs/keys/andrewettingerkey.pem ubuntu@db2.igsone.com"
 
 alias start_nginx="sudo /usr/local/Cellar/nginx/1.2.4/sbin/nginx"
 
@@ -87,7 +87,7 @@ alias vsvpn="sudo /usr/local/sbin/openvpn --config ~/Projects/vendscreen/client.
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx rails3 rails4 github autojump)
+plugins=(git osx github autojump)
 
 source $ZSH/oh-my-zsh.sh
 

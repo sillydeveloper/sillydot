@@ -1,7 +1,7 @@
 {
 	"bold_folder_labels": true,
 	"caret_style": "smooth",
-	"color_scheme": "Packages/Perv - Color Scheme/Perv Orange Moonlight.tmTheme",
+	"color_scheme": "Packages/Theme - Centurion/Galea.tmTheme",
 	"detect_slow_plugins": false,
 	"draw_minimap_border": false,
 	"draw_white_space": "all",
@@ -75,7 +75,7 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 14.0,
+	"font_size": 15,
 	"gutter": true,
 	"highlight_line": false,
 	"highlight_modified_tabs": true,
@@ -85,19 +85,16 @@
 		"Wordpress",
 		"Nodejs"
 	],
-	"match_brackets_angle": true,
+	"match_brackets": true,
 	"mouse_wheel_switches_tabs": false,
-	"rulers":
-	[
-		120
-	],
 	"save_on_focus_lost": true,
 	"tab_completion": true,
 	"tab_size": 2,
-	"theme": "Soda Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,
 	"word_wrap": true,
-	"wrap_width": 0
+	"wrap_width": 0,
+	"scroll_past_end": true
 }
+
