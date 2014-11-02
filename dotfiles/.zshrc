@@ -92,7 +92,7 @@ plugins=(git osx github autojump)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:~/Projects/android-sdk/platform-tools:~/Projects/android-sdk/tools:/usr/local/share/npm/bin
+export PATH=~/.rbenv/shims:~/.local/bin:$PATH:/usr/local/share/npm/bin
 export IGS_AWS_PEM=$IGS_KEYFILE
 export ANDROID_SDK=/Users/ettinger/Projects/android-sdk
 export ANDROID_HOME=/Users/ettinger/Projects/android-sdk
