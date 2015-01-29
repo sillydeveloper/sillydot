@@ -1,12 +1,13 @@
 #!/usr/bin/env ruby
 
-PROJECTS = "~/Projects"
-SILLYDOT = "sillydot"
+user= `whoami`.gsub(/\n/,'') # whoami appends a new line, clean it out
+user_directory = "/Users/#{USER}"
+project_directory = "/Users/#{user}/Projects/sillydot"
 
-ARGV.each do|a|
-  p "Moving #{a}..."
-  `mv ~/#{a} #{PROJECTS}/#{SILLYDOT}`
-  p "Linking #{a}..."
-  `ln -s #{PROJECTS}/#{SILLYDOT}/#{a} ~/#{a}`
+ARGV.each do |file|
+  p "Moving #{file}..."
+  `mv #{user_directory}/#{file} #{project_directory}/dotfiles`
+  p "Linking #{file}..."
+  `ln -s #{project_directory}/#{file} #{user_directory}/#{file}`
 end
 

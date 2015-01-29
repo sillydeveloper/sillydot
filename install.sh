@@ -1,3 +1,19 @@
-#!/bin/sh
+#!/usr/bin/env ruby
 
-cp makedot /usr/local/bin;
+user= `whoami`.gsub(/\n/,'') # whoami appends a new line, clean it out
+user_directory = "/Users/#{USER}"
+project_directory = "#{user_directory}/Projects/sillydot"
+
+Dir.entries("#{project_directory}/dotfiles").each do |dotfile|
+  if dotfile != "." and dotfile != ".." then
+    `mv #{user_directory}/#{dotfile} #{user_directory}/#{dotfile}.orig` if File.exist?("#{user_directory}/#{dotfile}")
+  
+    p "Linking #{dotfile}..."
+    `ln -s #{project_directory}/#{dotfile} ~/#{dotfile}`
+  end
+end
+
+p "Installing makedot..."
+`cp makedot /usr/local/bin;`
+
+
