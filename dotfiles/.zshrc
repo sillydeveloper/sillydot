@@ -15,10 +15,12 @@ DEFAULT_USER=`whoami`
 
 alias start_nginx="sudo /usr/local/Cellar/nginx/1.2.4/sbin/nginx"
 
-alias bets="bundle exec thin start"
 alias bert="bundle exec ruby -Itest"
 alias beg="bundle exec guard"
 alias be="bundle exec"
+alias bers="bundle exec rails s"
+
+alias serve="python -m SimpleHTTPServer 8000 ."
 
 alias h="history"
 alias hg="history | grep"
@@ -28,6 +30,10 @@ alias i="ifconfig"
 alias tr="traceroute"
 alias npmig="sudo npm install -g"
 alias npms="sudo npm s"
+alias tls="tmux ls"
+alias tkill="tmux kill-session -t "
+
+alias start_kafka="kafka-server-start.sh /usr/local/etc/kafka/server.properties"
 
 alias fix_bundle="bundle config --global path .bundle"
 alias aws="/Users/$DEFAULT_USER/.local/lib/aws/bin/aws"
@@ -44,4 +50,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH=~/Projects/dependencies/grails/bin:~/.rbenv/shims:~/.local/bin:$PATH:/usr/local/share/npm/bin:/usr/local/sbin
 export ANDROID_SDK=/Users/$DEFAULT_USER/Projects/android-sdk
 export ANDROID_HOME=/Users/$DEFAULT_USER/Projects/android-sdk
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+
+# fix autojump
+eval $(boot2docker shellinit)
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
